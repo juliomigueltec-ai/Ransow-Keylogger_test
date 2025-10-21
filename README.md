@@ -45,7 +45,7 @@ Conforme o conceito de Ethical Hacking, somente aplicar os mesmos em ambientes c
 4. Instale o Python e o sua IDE de preferencia para copilar o código
    
 
-## [1. Simulador de Ransomware](#ransonware)
+## [Simulador de Ransomware](#ransonware)
 
 
 ### Aplicabilidade
@@ -78,15 +78,15 @@ Simular criptografia real apenas nos arquivos criados em sandbox/originals/. O s
 ### Flags
 
 
-python sim_ransom_real.py --prepare --count 5           # cria arquivos de teste
+python sim_ransom_real.py --prepare --count 5               # cria arquivos de teste
 
-python sim_ransom_real.py --genkey                      # gera chave (sandbox/chave.key)
+python sim_ransom_real.py --genkey                          # gera chave (sandbox/chave.key)
 
-python sim_ransom_real.py --encrypt                     # criptografa (requer confirmação YES)
+python sim_ransom_real.py --encrypt                         # criptografa (requer confirmação YES)
 
-python sim_ransom_real.py --decrypt                     # descriptografa usando sandbox/chave.key
+python sim_ransom_real.py --decrypt                         # descriptografa usando sandbox/chave.key
 
-[2. Simulador de Keylogger](#keylogger)
+## [Simulador de Keylogger](#keylogger)
 
 
 ### Aplicabilidade
@@ -120,16 +120,16 @@ sandbox/smtp_config.json — template SMTP (se gerado)
 ### Flags
 
 
-python sim_keylogger_simple_simulator.py --simulate            # replay dos keystrokes simulados
+python sim_keylogger_simple_simulator.py --simulate                  # replay dos keystrokes simulados
 
-python sim_keylogger_simple_simulator.py --interactive         # digitação com consentimento
+python sim_keylogger_simple_simulator.py --interactive               # digitação com consentimento
 
-python sim_keylogger_simple_simulator.py --preview-email       # gera preview do payload (sem enviar)
+python sim_keylogger_simple_simulator.py --preview-email             # gera preview do payload (sem enviar)
 
-python sim_keylogger_simple_simulator.py --write-smtp-tpl      # cria sandbox/smtp_config.json
+python sim_keylogger_simple_simulator.py --write-smtp-tpl            # cria sandbox/smtp_config.json
 
 
-[Artefatos e suas Localizações](#artefatos-e-suas-localizações)
+## [Artefatos e suas Localizações](#artefatos-e-suas-localizações)
 
 
 Após execução, verifique:
@@ -141,7 +141,7 @@ sandbox/originals/, sandbox/backup_before_encrypt/, sandbox/chave.key (ransomwar
 sandbox/log.txt, sandbox/outgoing_email_preview.txt, sandbox/smtp_config.json (keylogger)
 
 
-[Boas Práticas para Ethical Hacking (Uso)](#boas-práticas-para-ethical-hacking)
+## [Boas Práticas para Ethical Hacking (Uso)](#boas-práticas-para-ethical-hacking)
 
 
 - Executar somente em VM isolada e criar snapshot (snapshot criado).
@@ -157,7 +157,7 @@ sandbox/log.txt, sandbox/outgoing_email_preview.txt, sandbox/smtp_config.json (k
 - Documentar execução (prints, comandos, hashes dos artefatos).
 - 
 
-[Detecção e Prevenção de Danos](#detecção-e-prevenção-de-danos)
+## [Detecção e Prevenção de Danos](#detecção-e-prevenção-de-danos)
 
 
 ### Como identificar atividades suspeitas:
