@@ -63,7 +63,7 @@ Simular criptografia real apenas nos arquivos criados em sandbox/originals/. O s
 - Requer digitar `YES` (case-sensitive) para executar `--encrypt`.
 
 - A chave é salva em 'sandbox/chave.key'. **Atenção:** a chave usada pelo simulador **NÃO deve** ser comitada em repositórios públicos nem compartilhada. Mantenha `sandbox/chave.key` em local seguro (offline) e adicione 'sandbox/' ao '.gitignore'.
-- 
+  
 
 ### Arquivos gerados
 
@@ -73,7 +73,7 @@ Simular criptografia real apenas nos arquivos criados em sandbox/originals/. O s
 - 'sandbox/backup_before_encrypt/' — cópia dos arquivos antes da encriptação
   
 - 'sandbox/chave.key' — chave Fernet (mantenha offline / **não comitar**)
-- 
+  
 
 ### Flags
 
