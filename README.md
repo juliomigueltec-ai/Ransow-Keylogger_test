@@ -94,7 +94,7 @@ python sim_ransom_real.py --decrypt                         # descriptografa usa
 
 Demonstrar ciclo de um keylogger sem capturar teclas furtivas — replay a partir de sandbox/input_simulated_keystrokes.txt, logging em sandbox/log.txt e preview de exfiltração.
 
-**Status de Desenvolvimento:** O código-fonte deste simulador está disponível para revisão no branch [simulators/sim_keylogger_simple_simulator.py.](https://github.com/juliomigueltec-ai/Ransow-Keylogger_test/blob/047b0111b4759023962bdd75ce16a15607c7994e/simulators/sim_keylogger_simple_simulator.py)
+**Status de Desenvolvimento:** O código-fonte deste simulador está disponível para revisão no branch [https://github.com/juliomigueltec-ai/Ransow-Keylogger_test/blob/04502e762f43a8490a7c6911e9ee609eb073f859/simulators/sim_keylogger_simple_simulator.py]
 
 
 ### Comportamento
