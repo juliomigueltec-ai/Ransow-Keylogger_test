@@ -1,0 +1,16 @@
+# Exclui arquivos temporários e de compilação do Python
+__pycache__/
+*.pyc
+*.swp
+
+# Arquivos de configurações de IDEs
+.idea/ # Pycharm
+.vscode/
+
+# ----------------------------------------------------
+# ARTEFATOS CRÍTICOS E LOGS (SEGURANÇA E TRABALHO)
+# ----------------------------------------------------
+
+# CRÍTICO: Exclui toda a pasta sandbox (contém chave.key e logs)
+# O Git não deve rastrear chaves ou dados de teste/logs!
+sandbox/
