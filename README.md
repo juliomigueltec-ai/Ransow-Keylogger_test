@@ -46,7 +46,7 @@ Conforme o conceito de Ethical Hacking, somente aplicar os mesmos em ambientes c
 
 Simular criptografia real apenas nos arquivos criados em sandbox/originals/. O script inclui confirmação manual e faz backup (sandbox/backup_before_encrypt/) antes de sobrescrever.
 
-> **Status de Desenvolvimento:** O código-fonte deste simulador está disponível para revisão no branch ['feature/ransom-sim'](/tree/feature/ransom-sim), e foi mesclado através do Pull Request [#1](https://github.com/julio/Ransow-Keylogger_test/pull/1). >
+**Status de Desenvolvimento:** O código-fonte deste simulador está disponível para revisão no branch ['feature/ransom-sim'](/tree/feature/ransom-sim), e foi mesclado através do Pull Request [#1](https://github.com/julio/Ransow-Keylogger_test/pull/1). 
 
 ### Comportamento
 
@@ -66,10 +66,13 @@ Simular criptografia real apenas nos arquivos criados em sandbox/originals/. O s
 
 ### Flags
 
-python simulators/sim_ransom.py --prepare --count 5   # cria arquivos de teste
-python simulators/sim_ransom.py --genkey              # gera chave (sandbox/chave.key)
-python simulators/sim_ransom.py --encrypt             # criptografa (requer confirmação YES)
-python simulators/sim_ransom.py --decrypt             # descriptografa usando sandbox/chave.key
+python sim_ransom_real.py --prepare --count 5         # cria arquivos de teste
+
+python sim_ransom_real.py --genkey                    # gera chave (sandbox/chave.key)
+
+python sim_ransom_real.py --encrypt                   # criptografa (requer confirmação YES)
+
+python sim_ransom_real.py --decrypt                   # descriptografa usando sandbox/chave.key
 
 [2. Simulador de Keylogger](#keylogger)
 
@@ -77,8 +80,7 @@ python simulators/sim_ransom.py --decrypt             # descriptografa usando sa
 
 Demonstrar ciclo de um keylogger sem capturar teclas furtivas — replay a partir de sandbox/input_simulated_keystrokes.txt, logging em sandbox/log.txt e preview de exfiltração.
 
-> **Status de Desenvolvimento:** O código-fonte deste simulador está disponível para revisão no branch ['feature/keylogger-sim'](/tree/feature/keylogger-sim), e foi mesclado através do Pull Request [#2](https://github.com/julio/Ransow-Keylogger_test/pull/2).>
-
+**Status de Desenvolvimento:** O código-fonte deste simulador está disponível para revisão no branch ['feature/keylogger-sim'](/tree/feature/keylogger-sim), e foi mesclado através do Pull Request [#2](https://github.com/julio/Ransow-Keylogger_test/pull/2).
 
 ### Comportamento
 
@@ -98,10 +100,13 @@ sandbox/smtp_config.json — template SMTP (se gerado)
 
 ### Flags
 
-python simulators/sim_keylogger_simple_simulator.py --simulate      # replay dos keystrokes simulados
-python simulators/sim_keylogger_simple_simulator.py --interactive   # digitação com consentimento
-python simulators/sim_keylogger_simple_simulator.py --preview-email # gera preview do payload (sem enviar)
-python simulators/sim_keylogger_simple_simulator.py --write-smtp-tpl # cria sandbox/smtp_config.json
+python sim_keylogger_simple_simulator.py --simulate          # replay dos keystrokes simulados
+
+python sim_keylogger_simple_simulator.py --interactive       # digitação com consentimento
+
+python sim_keylogger_simple_simulator.py --preview-email     # gera preview do payload (sem enviar)
+
+python sim_keylogger_simple_simulator.py --write-smtp-tpl    # cria sandbox/smtp_config.json
 
 [Artefatos e suas Localizações](#artefatos-e-suas-localizações)
 
