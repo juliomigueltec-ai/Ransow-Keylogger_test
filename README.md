@@ -1,25 +1,27 @@
 # Ransow-Keylogger_test
 
-## Descrição
+## [Descrição](#descrição)
 
 Iremos abordar neste repositorio, a utilização do Python para estruturamento, e conceito e testes em ambiente controlado de ransowares e keyloggers, mostrando contramedidas e formas de prevenção.
 
-## Aviso Legal
+## [Aviso Legal](#aviso-legal)
 
 Os codigos escritos e implementados neste readme.md são de total forma educacional e não-destrutiva.
 Conforme o conceito de Ethical Hacking, somente aplicar os mesmos em ambientes controlados e V.M's; nunca usando em ambientes de produção.
 
-## Indice
-
-1. Pre-requesitos.
-2. Configuração do ambiente.
-3. Simulador de Ransomware — uso e exemplos.
-4. Simulador de Keylogger — uso e exemplos.
-5. Artefatos produzidos - e suas localizações.
-6. Boas praticas para Ethical Hacking (Uso).
-7. Detecção e Prevenção de danos.
-
-## Pré-requesitos
+## Índice
+* [Descrição](#descrição)
+* [Aviso Legal](#aviso-legal)
+* [Pré-requisitos](#pré-requisitos)
+* [Configuração do Ambiente](#configuração-do-ambiente)
+* [1. Simulador de Ransomware](#ransonware)
+* [2. Simulador de Keylogger](#keylogger)
+* [Artefatos e suas Localizações](#artefatos-e-suas-localizações)
+* [Boas Práticas para Ethical Hacking (Uso)](#boas-práticas-para-ethical-hacking)
+* [Detecção e Prevenção de Danos](#detecção-e-prevenção-de-danos)
+* **[Estrutura de Branches (Desenvolvimento)](#estrutura-de-branches-desenvolvimento)** <-- NOVO
+* 
+## [Pré-requisitos](#pré-requisitos)
 
 - Oracle Virtual Box (para emulação do S.O Windows)
   
@@ -31,14 +33,14 @@ Conforme o conceito de Ethical Hacking, somente aplicar os mesmos em ambientes c
   
 - Efetuar a codificação e testes não-destrutivos na V.M com Windows.
 
-## Configuração do ambiente
+## [Configuração do Ambiente](#configuração-do-ambiente)
 
 1. Apos download e instalação do Oracle Virtual Box, extrair a .iso's e executar para trazer para a lista de maquinas no Oracle.
 2. Configurar o snapshot ao iniciar o primeiro start do sistema operacional.
 3. Criar uma conta de e-mail de teste
 4. Instale o Python e o sua IDE de preferencia para copilar o código
 
-## Ransonware
+## [1. Simulador de Ransomware](#ransonware)
 
 ### Aplicabilidade
 
@@ -204,7 +206,7 @@ python simulators/sim_ransom.py --genkey              # gera chave (sandbox/chav
 python simulators/sim_ransom.py --encrypt             # criptografa (requer confirmação YES)
 python simulators/sim_ransom.py --decrypt             # descriptografa usando sandbox/chave.key
 
-## Keylogger
+[2. Simulador de Keylogger](#keylogger)
 
 ### Aplicabilidade
 
@@ -414,7 +416,7 @@ python simulators/sim_keylogger_simple_simulator.py --interactive   # digitaçã
 python simulators/sim_keylogger_simple_simulator.py --preview-email # gera preview do payload (sem enviar)
 python simulators/sim_keylogger_simple_simulator.py --write-smtp-tpl # cria sandbox/smtp_config.json
 
-## Artefatos e suas localizações:
+[Artefatos e suas Localizações](#artefatos-e-suas-localizações)
 
 Após execução, verifique:
 
@@ -424,7 +426,7 @@ sandbox/originals/, sandbox/backup_before_encrypt/, sandbox/chave.key (ransomwar
 
 sandbox/log.txt, sandbox/outgoing_email_preview.txt, sandbox/smtp_config.json (keylogger)
 
-## Boas praticas para Ethical Hacking:
+[Boas Práticas para Ethical Hacking (Uso)](#boas-práticas-para-ethical-hacking)
 
 - Executar somente em VM isolada e criar snapshot (snapshot criado).
 
@@ -438,7 +440,7 @@ sandbox/log.txt, sandbox/outgoing_email_preview.txt, sandbox/smtp_config.json (k
 
 - Documentar execução (prints, comandos, hashes dos artefatos).
 
-## Detecção e Prevenção de danos:
+[Detecção e Prevenção de Danos](#detecção-e-prevenção-de-danos)
 
 ### Como identificar atividades suspeitas:
 
